@@ -18,7 +18,7 @@ public class User implements Serializable {
     private String password;
 
     //Set representa um conjunto que nao aceita repeticao do mesmo valor
-    //para evitar que um mesmo usuario tenha mais roles
+    //para evitar que um usuario tenha roles repetidas no banco (set impede valores repetidos)
     @ManyToMany(fetch = FetchType.EAGER)
             @JoinTable(
                     name = "tb_user_role",
